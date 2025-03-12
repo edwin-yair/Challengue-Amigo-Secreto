@@ -1,0 +1,3 @@
+Este proyecto es creado para demostrar mis conocimientos en logica de programacion con javascript
+El Challengue del amigo secreto
+Iniciamos......
