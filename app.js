@@ -19,3 +19,26 @@ function agregarAmigo(){
 function limpiarCaja(){
     document.querySelector('#amigo').value = '';
 }
+
+//creamos una funcion para actualizar la lista de amigos en html
+function actualizarListaHTML(){
+    let listaAmigoUl = document.getElementById("listaAmigos");
+    listaAmigoUl.innerHTML = "";
+
+    amigos.array.forEach(Element => {
+        let li = document.createElement("li");
+        li.texContent = Element;
+        listaAmigoUl.apeendChild(li);
+    });
+}  
+
+function sortearAmigo(){
+    let amigoAleatorio = Math.floor(Math.random()*amigos.length);
+    let amigoElejido = amigos[amigoAleatorio];
+    let resultadoU1 = document.getElementById("resultado");
+    resultadoU1.innerHTML = `<li> Tu amigo secreto es!! ${amigoElejido}<li>`
+    if(amigos.length == 0){
+        alert("No hay amigos para sortear. Agrega nombres!");
+    }
+    
+}
